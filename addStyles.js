@@ -126,9 +126,16 @@ function removeStyleElement(styleElement) {
 	}
 }
 
+function addRefToStyleElement(ref) {
+	if(options.ref) {
+		styleElement.setAttribute("data-ref", options.ref);
+	}
+}
+
 function createStyleElement(options) {
 	var styleElement = document.createElement("style");
 	styleElement.type = "text/css";
+	addRefToStyleElement(styleElement, options.ref);
 	insertStyleElement(options, styleElement);
 	return styleElement;
 }
@@ -136,6 +143,7 @@ function createStyleElement(options) {
 function createLinkElement(options) {
 	var linkElement = document.createElement("link");
 	linkElement.rel = "stylesheet";
+	addRefToStyleElement(linkElement, options.ref);
 	insertStyleElement(options, linkElement);
 	return linkElement;
 }
