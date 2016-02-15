@@ -126,9 +126,9 @@ function removeStyleElement(styleElement) {
 	}
 }
 
-function addRefToStyleElement(ref) {
+function addRefToStyleElement(element, ref) {
 	if(ref) {
-		styleElement.setAttribute("data-ref", ref);
+		element.setAttribute("data-ref", ref);
 	}
 }
 
