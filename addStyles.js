@@ -127,8 +127,8 @@ function removeStyleElement(styleElement) {
 }
 
 function addRefToStyleElement(ref) {
-	if(options.ref) {
-		styleElement.setAttribute("data-ref", options.ref);
+	if(ref) {
+		styleElement.setAttribute("data-ref", ref);
 	}
 }
 
